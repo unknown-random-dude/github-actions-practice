@@ -18,8 +18,10 @@ jobs:
         # we use "uses: actions/checkout@v7" for cloning the files/folders etc..
         uses: actions/checkout@v7
 
-        # this step will install the linting tool
+        # This step will install the linting tool
       - name: Install linter
         run: pip install ruff
 
-      
+        # This step will run the linter
+      - name: Check the files for linting
+        run: check ruff .
