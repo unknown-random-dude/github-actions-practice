@@ -1,1 +1,18 @@
 # lint - checks syntax, code spelling, code indentation
+# What's your goal for your workflow :
+# Whenever someone changes the python code,
+# Ther linter checks if syntax, format, indentation is correct or not
+
+name: Auto Linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    # This step will automatically clone the code of the current branch into the runner
+    steps:
+      - name: Checkout/clone the code
+        uses: actions/checkout@v7
