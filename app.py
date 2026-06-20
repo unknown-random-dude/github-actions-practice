@@ -1,4 +1,4 @@
-# This is the flask-app
+# This is the flask-app, fetched from TWS 
 from flask import Flask, render_template
 app = Flask(__name__)
 
